@@ -1,7 +1,4 @@
-# blank-template
-Blank Template (no webpack).
-Just to  get basic folder structure ready.
-Update it accordingly when using it.
-
+# Drum Machine for freeCodeCamp Project
+## using html, css and javascript
 
 Developed by Shaunak Basu / https://github.com/basushaunak
