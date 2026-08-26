@@ -19,11 +19,12 @@ audios.forEach((audio) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  const pressedKey = event.code.match(/Key([A-Z])/)[1];
-  console.log(event);
-  console.log("Key Pressed: ", pressedKey);
-  if (trapKeys.includes(pressedKey)) {
-    playBeat(pressedKey);
+  const pressedKey = event.key.toUpperCase();
+  const audio = document.getElementById(pressedKey);
+  if (audio) {
+    audio.currentTime = 0;
+    audio.play();
+    display.textContent = parentButton.id;
   }
 });
 
