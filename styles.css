@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  background-image: url("./background.jpg");
+  background-size: cover;
+  background-blend-mode: lighten;
+  height: 100vh;
+  width: 100vw;
+}
+
+#drum-machine {
+  width: 80%;
+}
+#display {
+  margin-block-start: 1rem;
+  background-color: rgba(78, 77, 77, 0.5);
+  color: white;
+  border: 2px solid yellow;
+  padding: 0.25em 1em;
+  max-width: fit-content;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-inline: auto;
+  user-select: none;
+}
+#pad-bank {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  margin-inline: auto;
+}
+.drum-pad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  padding: 0.25em;
+  width: 5rem;
+  height: 5rem;
+  font-weight: bold;
+  border: 2px black solid;
+  background-color: green;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+.drum-pad:hover {
+  opacity: 0.5;
+  background-color: lightgreen;
+}
+
+.drum-pad:active,
+.drum-pad.playing {
+  background-color: red;
+  border: 2px yellow solid;
+}
